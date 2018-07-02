@@ -1,19 +1,18 @@
 
 import React, { Component } from 'react';
-
 import {
-	AppRegistry,
 	StyleSheet,
 	View,
+	Image
 } from 'react-native';
 
-import Main from './src/components/Main';
+import logoImg from '../../images/logo.png';
 
-export default class App extends Component {
+export default class Logo extends Component {
 	render() {
 		return (
 			<View style={styles.container}>
-				<Main />
+				<Image source={logoImg} resizeMode='contain' />
 			</View>
 		);
 	}
@@ -21,8 +20,8 @@ export default class App extends Component {
 
 const styles = StyleSheet.create({
 	container: {
-		flex: 1,
-		backgroundColor: '#F5FCFF',
-	},
+		flex: 2,
+		alignItems: 'center',
+		justifyContent: 'center',
+	}
 });
-
